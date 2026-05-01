@@ -1,0 +1,19 @@
+def get_dahisar_summary():
+    data = {
+        "Name": "Dahisar",
+        "District": "Mumbai Suburban",
+        "State": "Maharashtra",
+        "Metro_Stations": ["Dahisar East", "Ovaripada", "Dahisar West"],
+        "Famous_For": "Gateway to Mumbai / Check Naka",
+        "Pincode": 400068
+    }
+
+    print(f"--- Quick Fact Sheet: {data['Name']} ---")
+    for key, value in data.items():
+        if isinstance(value, list):
+            print(f"{key:18}: {', '.join(value)}")
+        else:
+            print(f"{key:18}: {value}")
+
+if __name__ == "__main__":
+    get_dahisar_summary()
